@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>
+      Kalkulator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div text-right>
+    <button ion-button color="danger" (click)="reset()">Reset</button>
+  </div>
+  <div text-center>
+    <ion-icon name="calculator" style="font-size: 4em"></ion-icon>
+  </div>
+  <h4 text-center>Volume Balok</h4>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Panjang (cm)</ion-label>
+      <ion-input type="number" [(ngModel)]="panjang"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Lebar (cm)</ion-label>
+      <ion-input type="number" [(ngModel)]="lebar"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label floating>Tinggi (cm)</ion-label>
+        <ion-input type="number" [(ngModel)]="tinggi"></ion-input>
+      </ion-item>
+  
+  </ion-list>
+  <br/>
+  <button ion-button block (click)="hitungVolume()">Hitung</button>
+  <br/>
+  <h4 text-center>volume balok : {{volume}} cm<sup>3</sup></h4>
+</ion-content>
